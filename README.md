@@ -9,11 +9,11 @@ Processo de fluxo do Git
 
 # Como nomear branches
 
-- Branch de feature: ***feat/[feature-name]***
+- Branch de feature: ***feature/[feature-name]***
 - Branch de bug fix em desenvolvimento: ***fix/[fix-description]***
 - Branch de bug fix em produção: ***hotfix/[hotfix-description]***
 - Branch de release: ***release/v.1.00-b10***
-- Branch de refactor: ***ref/[ref-description]***
+- Branch de refactor: ***refactor/[refactor-description]***
 - Branch de configuração/update de bibliotecas: ***chore/[chore-description]***
 
 # Regras de nomenclatura
@@ -21,30 +21,30 @@ Processo de fluxo do Git
 - Sempre escrito em inglês;
 - Sempre escrito em minúsculo;
 - Usar apenas letras e números, quando precisar utilizar espaço, usar o
-caracter ***-***. Exemplo: ***feat/new-login***. Para tags de release, usar
+caracter ***-***. Exemplo: ***feature/new-login***. Para tags de release, usar
 pontos. Exemplo: ***release-v1.0.0-b51***;
 - Para branches compartilhadas entre devs, utilizar as iniciais do
-primeiro e último nome do dev na descrição da branch. Exemplo: ***feat/gm-new-login***.
+primeiro e último nome do dev na descrição da branch. Exemplo: ***feature/gm-new-login***.
 
 # Features
 
-Crie a branch a partir da branch ***develop***, use o prefixo ***feat/*** e o nome da
+Crie a branch a partir da branch ***develop***, use o prefixo ***feature/*** e o nome da
 feature.
 
 Flow:
-- Start: ***develop*** – create branch >> ***feat/login*** 
-- Done: ***feat/login*** – merge >> ***develop***
+- Start: ***develop*** – create branch >> ***feature/login*** 
+- Done: ***feature/login*** – merge >> ***develop***
 
 ### Múltiplos devs:
 
-Quando houver mais de um desenvolvedor trabalhando na mesma branch, crie branches secundárias a partir da branch da feature ***feat/[feature-name]***, usando as iniciais do desenvolvedor como prefixo da descrição da branch:
+Quando houver mais de um desenvolvedor trabalhando na mesma branch, crie branches secundárias a partir da branch da feature ***feature/[feature-name]***, usando as iniciais do desenvolvedor como prefixo da descrição da branch:
 
 Flow:
-- Feature start: ***develop*** – create branch >> ***feat/login***
-- Dev-1 start: ***feat/login*** – create branch >> ***feat/ey-login*** 
-- Dev-2 start: ***feat/login*** – create branch >> ***feat/gm-login*** 
-- Dev-1 done: ***feat/ey-login*** – merge >> ***feat/login*** 
-- Feature done: ***feat/login*** –merge >> ***develop***
+- Feature start: ***develop*** – create branch >> ***feature/login***
+- Dev-1 start: ***feature/login*** – create branch >> ***feature/ey-login*** 
+- Dev-2 start: ***feature/login*** – create branch >> ***feature/gm-login*** 
+- Dev-1 done: ***feature/ey-login*** – merge >> ***feature/login*** 
+- Feature done: ***feature/login*** –merge >> ***develop***
 
 ### Note:
 Nesse caso, a branch com as iniciais do desenvolvedor, só pode fazer merge com a branch base da feature, nunca com a ***develop*** ou qualquer outra. A branch que faz merge com ***develop*** é apenas a branch base.
@@ -52,12 +52,12 @@ Nesse caso, a branch com as iniciais do desenvolvedor, só pode fazer merge com 
 # Refactor
 
 Crie a branch a partir da branch ***develop*** para refazer alguma feature ou
-código, use o prefixo ***ref/*** e a descrição do refactor. 
+código, use o prefixo ***refactor/*** e a descrição do refactor. 
 
 Flow:
 
-- Start: ***develop*** – create branch >> ***ref/add-swiftlint*** 
-- Done: ***ref/add-swiftlint*** – merge >> ***develop***
+- Start: ***develop*** – create branch >> ***refactor/add-swiftlint*** 
+- Done: ***refactor/add-swiftlint*** – merge >> ***develop***
 
 # Hotfix
 
